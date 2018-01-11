@@ -1,0 +1,465 @@
+十一月 13, 2017 4:14:30 下午 org.jivesoftware.smack.util.DNSUtil resolveDomain
+警告: Exception while resovling SRV records for 127.0.0.1. Consider adding '_xmpp-(server|client)._tcp' DNS SRV Records
+javax.naming.CommunicationException: DNS error [Root exception is java.net.SocketTimeoutException: Receive timed out]; remaining name '_xmpp-client._tcp.127.0.0.1'
+	at com.sun.jndi.dns.DnsClient.query(Unknown Source)
+	at com.sun.jndi.dns.Resolver.query(Unknown Source)
+	at com.sun.jndi.dns.DnsContext.c_getAttributes(Unknown Source)
+	at com.sun.jndi.toolkit.ctx.ComponentDirContext.p_getAttributes(Unknown Source)
+	at com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(Unknown Source)
+	at com.sun.jndi.toolkit.ctx.PartialCompositeDirContext.getAttributes(Unknown Source)
+	at javax.naming.directory.InitialDirContext.getAttributes(Unknown Source)
+	at org.jivesoftware.smack.util.dns.javax.JavaxResolver.lookupSRVRecords(JavaxResolver.java:78)
+	at org.jivesoftware.smack.util.DNSUtil.resolveDomain(DNSUtil.java:171)
+	at org.jivesoftware.smack.util.DNSUtil.resolveXMPPDomain(DNSUtil.java:120)
+	at org.jivesoftware.smack.AbstractXMPPConnection.populateHostAddresses(AbstractXMPPConnection.java:573)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectUsingConfiguration(XMPPTCPConnection.java:565)
+	at org.jivesoftware.smack.tcp.XMPPTCPConnection.connectInternal(XMPPTCPConnection.java:851)
+	at org.jivesoftware.smack.AbstractXMPPConnection.connect(AbstractXMPPConnection.java:364)
+	at org.jivesoftware.LoginDialog$LoginPanel.login(LoginDialog.java:1158)
+	at org.jivesoftware.LoginDialog$LoginPanel.access$9(LoginDialog.java:1118)
+	at org.jivesoftware.LoginDialog$LoginPanel$4.construct(LoginDialog.java:948)
+	at org.jivesoftware.spark.util.SwingWorker.lambda$0(SwingWorker.java:142)
+	at org.jivesoftware.spark.util.SwingWorker$$Lambda$26/12505989.run(Unknown Source)
+	at java.lang.Thread.run(Unknown Source)
+Caused by: java.net.SocketTimeoutException: Receive timed out
+	at java.net.DualStackPlainDatagramSocketImpl.socketReceiveOrPeekData(Native Method)
+	at java.net.DualStackPlainDatagramSocketImpl.receive0(Unknown Source)
+	at java.net.AbstractPlainDatagramSocketImpl.receive(Unknown Source)
+	at java.net.DatagramSocket.receive(Unknown Source)
+	at com.sun.jndi.dns.DnsClient.doUdpQuery(Unknown Source)
+	... 20 more
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: Failed to initialize LibJitsi backend org.jitsi.impl.libjitsi.LibJitsiOSGiImpl. (Exception stack trace follows.) Will try an alternative.
+java.lang.IllegalStateException: FrameworkUtil.getBundle
+	at org.jitsi.impl.libjitsi.LibJitsiOSGiImpl.<init>(LibJitsiOSGiImpl.java:46)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
+	at sun.reflect.NativeConstructorAccessorImpl.newInstance(Unknown Source)
+	at sun.reflect.DelegatingConstructorAccessorImpl.newInstance(Unknown Source)
+	at java.lang.reflect.Constructor.newInstance(Unknown Source)
+	at java.lang.Class.newInstance(Unknown Source)
+	at org.jitsi.service.libjitsi.LibJitsi.start(LibJitsi.java:247)
+	at org.jitsi.service.libjitsi.LibJitsi.start(LibJitsi.java:180)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.scanDevices(MediaPreferencePanel.java:137)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.<init>(MediaPreferencePanel.java:102)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreference.<init>(MediaPreference.java:33)
+	at org.jivesoftware.spark.preference.PreferenceManager.<init>(PreferenceManager.java:55)
+	at org.jivesoftware.spark.SparkManager.getPreferenceManager(SparkManager.java:166)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.<init>(SparkTransferManager.java:209)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.getInstance(SparkTransferManager.java:132)
+	at org.jivesoftware.spark.Workspace.buildLayout(Workspace.java:215)
+	at org.jivesoftware.LoginDialog.lambda$1(LoginDialog.java:1416)
+	at org.jivesoftware.LoginDialog$$Lambda$30/25427194.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: Successfully started LibJitsi using as implementation: org.jitsi.impl.libjitsi.LibJitsiImpl
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vendor=Oracle Corporation
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.management.compiler=HotSpot Client Compiler
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: os.name=Windows 7
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.boot.class.path=d:\eclipse1\netlabclient\spark\jre\lib\resources.jar;d:\eclipse1\netlabclient\spark\jre\lib\rt.jar;d:\eclipse1\netlabclient\spark\jre\lib\sunrsasign.jar;d:\eclipse1\netlabclient\spark\jre\lib\jsse.jar;d:\eclipse1\netlabclient\spark\jre\lib\jce.jar;d:\eclipse1\netlabclient\spark\jre\lib\charsets.jar;d:\eclipse1\netlabclient\spark\jre\lib\jfr.jar;d:\eclipse1\netlabclient\spark\jre\classes
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.desktop=windows
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.specification.vendor=Oracle Corporation
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.runtime.version=1.8.0_25-b18
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.sf.fmj.utility.JmfRegistry.filename=C:\Users\Dell\.\.fmj.registry
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.name=Dell
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.language=zh
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.boot.library.path=d:\eclipse1\netlabclient\spark\jre\bin
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.version=1.8.0_25
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.timezone=Asia/Shanghai
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.arch.data.model=32
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.endorsed.dirs=d:\eclipse1\netlabclient\spark\jre\lib\endorsed
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.cpu.isalist=pentium_pro+mmx pentium_pro pentium+mmx pentium i486 i386 i86
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.jnu.encoding=GBK
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: file.encoding.pkg=sun.io
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: file.separator=\
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.specification.name=Java Platform API Specification
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.class.version=52.0
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.country=CN
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.awt.noerasebackground=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.home=d:\eclipse1\netlabclient\spark\jre
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.info=mixed mode
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.sf.fmj.utility.JmfRegistry.disableLoad=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: os.version=6.1
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: path.separator=;
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.version=25.25-b02
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.variant=
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: javax.security.auth.useSubjectCredsOnly=false
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.awt.enableExtraMouseButtons=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.awt.printerjob=sun.awt.windows.WPrinterJob
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.io.unicode.encoding=UnicodeLittle
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: awt.toolkit=sun.awt.windows.WToolkit
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.script=
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.home=C:\Users\Dell
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.semaphoreName=Local\d:_eclipse1_netlabclient_spark_spark.exe
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.specification.vendor=Oracle Corporation
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: apple.laf.useScreenMenuBar=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.library.path=E:/Program Files/java/jre1.8.0_112/bin/server;E:/Program Files/java/jre1.8.0_112/bin;E:/Program Files/java/jre1.8.0_112/lib/amd64;C:\ProgramData\Oracle\Java\javapath;C:\Program Files (x86)\Intel\iCLS Client\;C:\Program Files\Intel\iCLS Client\;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\IPT;C:\Program Files (x86)\ATI Technologies\ATI.ACE\Core-Static\;E:\Program Files\java\jdk1.8.0_112\bin;E:\Program Files\java\jdk1.8.0_112/jre/bin;E:\Program Files\MATLAB\R2014a\runtime\win64;E:\Program Files\MATLAB\R2014a\bin;E:\Program Files\MATLAB\R2014a\polyspace\bin;E:\Program Files\MATLAB\MATLAB Compiler Runtime\v83\runtime\win64;C:\Program Files (x86)\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\Tools\Binn\;C:\Program Files\Microsoft SQL Server\100\DTS\Binn\;E:\Program Files\MATLAB\MATLAB Compiler Runtime\v80\runtime\win64;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\;C:\Program Files (x86)\MySQL\MySQL Fabric 1.5 & MySQL Utilities 1.5\Doctrine extensions for PHP\;E:\Program Files\scala\bin;E:\Program Files\scala\jre\bin;E:\Program Files\hadoop-2.7.3\bin;E:\Program Files\hadoop-2.7.3\sbin;E:\Program Files\spark-2.1.0-bin-hadoop2.7\bin;E:\Program Files\TortoiseSVN\bin;E:\Program Files\VisualSVN Server\bin;E:\Program Files\Python\Python3.5.2\Scripts\;E:\Program Files\Python\Python3.5.2\;C:\Users\Dell\Anaconda3;C:\Users\Dell\Anaconda3\Scripts;C:\Users\Dell\Anaconda3\Library\bin;E:\Program Files\Microsoft Visual Studio\Common\Tools\WinNT;E:\Program Files\Microsoft Visual Studio\Common\MSDev98\Bin;E:\Program Files\Microsoft Visual Studio\Common\Tools;E:\Program Files\Microsoft Visual Studio\VC98\bin;E:\Program Files\SSH Communications Security\SSH Secure Shell;C:\Users\Dell\Desktop;;d:\eclipse1\netlabclient\spark\jre\bin;C:\Users\Dell\AppData\Local\Temp\e4j6577.tmp_dir1510560837\exe4jlib.jar;C:\Users\Dell\AppData\Local\Temp\e4j6577.tmp_dir1510560837\Spark.jar;;C:\Users\Dell\AppData\Roaming\Spark\resources
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vendor.url=http://java.oracle.com/
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.consoleCodepage=cp0
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: org.jitsi.service.audionotifier.AudioNotifierService=org.jitsi.impl.neomedia.notify.AudioNotifierServiceImpl
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.vendor=Oracle Corporation
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.runtime.name=Java(TM) SE Runtime Environment
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.java.command=D:\eclipse1\netlabClient\Spark\Spark.exe
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.class.path=C:\Users\Dell\AppData\Local\Temp\e4j6577.tmp_dir1510560837\exe4jlib.jar;C:\Users\Dell\AppData\Local\Temp\e4j6577.tmp_dir1510560837\Spark.jar;
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.java2d.noddraw=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.tempDir=C:\Users\Dell\AppData\Local\Temp\e4j6577.tmp_dir1510560837
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.java.sip.communicator.SC_LOG_DIR_LOCATION=C:\Users\Dell
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.specification.name=Java Virtual Machine Specification
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.java.sip.communicator.SC_HOME_DIR_LOCATION=C:\Users\Dell
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.moduleName=D:\eclipse1\netlabClient\Spark\Spark.exe
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.specification.version=1.8
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.cpu.endian=little
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.os.patch.level=Service Pack 1
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.io.tmpdir=C:\Users\Dell\AppData\Local\Temp\
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vendor.url.bug=http://bugreport.sun.com/bugreport/
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.sf.fmj.utility.JmfRegistry.disableCommit=true
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.java.sip.communicator.SC_CACHE_DIR_LOCATION=C:\Users\Dell
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: os.arch=x86
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.awt.graphicsenv=sun.awt.Win32GraphicsEnvironment
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.launchName=Spark.exe
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.ext.dirs=d:\eclipse1\netlabclient\spark\jre\lib\ext;C:\Windows\Sun\Java\lib\ext
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: user.dir=D:\eclipse1\netlabClient\Spark
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: exe4j.unextractedPosition=38291155
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: line.separator=
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.vm.name=Java HotSpot(TM) Client VM
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.security.auth.login.config=gss.conf
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: file.encoding=UTF-8
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: install4j.exeDir=D:\eclipse1\netlabClient\Spark\
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: java.specification.version=1.8
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: net.java.sip.communicator.SC_HOME_DIR_NAME=.
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: sun.awt.erasebackgroundonresize=false
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: Normal classloader
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: failed to find jitsi-defaults.properties with class loader, will continue without it.
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: Normal classloader
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: failed to find jitsi-default-overrides.properties with class loader, will continue without it.
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger warn
+警告: Codec org.jitsi.impl.neomedia.codec.audio.mp3.JNIEncoder is NOT successfully registered
+java.lang.UnsatisfiedLinkError: no jnffmpeg in java.library.path
+	at java.lang.ClassLoader.loadLibrary(Unknown Source)
+	at java.lang.Runtime.loadLibrary0(Unknown Source)
+	at java.lang.System.loadLibrary(Unknown Source)
+	at org.jitsi.util.JNIUtils.loadLibrary(JNIUtils.java:41)
+	at org.jitsi.impl.neomedia.codec.FFmpeg.<clinit>(FFmpeg.java:228)
+	at org.jitsi.impl.neomedia.codec.audio.FFmpegAudioEncoder.assertFindAVCodec(FFmpegAudioEncoder.java:49)
+	at org.jitsi.impl.neomedia.codec.audio.mp3.JNIEncoder.<clinit>(JNIEncoder.java:64)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.neomedia.codec.FMJPlugInConfiguration.registerCustomCodecs(FMJPlugInConfiguration.java:234)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.setupFMJ(MediaServiceImpl.java:1618)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.<clinit>(MediaServiceImpl.java:250)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.initializeService(LibJitsiImpl.java:173)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.getService(LibJitsiImpl.java:131)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl.getService(LibJitsiImpl.java:91)
+	at org.jitsi.service.libjitsi.LibJitsi.invokeGetServiceOnImpl(LibJitsi.java:172)
+	at org.jitsi.service.libjitsi.LibJitsi.getMediaService(LibJitsi.java:124)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.scanDevices(MediaPreferencePanel.java:140)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.<init>(MediaPreferencePanel.java:102)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreference.<init>(MediaPreference.java:33)
+	at org.jivesoftware.spark.preference.PreferenceManager.<init>(PreferenceManager.java:55)
+	at org.jivesoftware.spark.SparkManager.getPreferenceManager(SparkManager.java:166)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.<init>(SparkTransferManager.java:209)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.getInstance(SparkTransferManager.java:132)
+	at org.jivesoftware.spark.Workspace.buildLayout(Workspace.java:215)
+	at org.jivesoftware.LoginDialog.lambda$1(LoginDialog.java:1416)
+	at org.jivesoftware.LoginDialog$$Lambda$30/25427194.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger warn
+警告: Codec org.jitsi.impl.neomedia.codec.audio.amrwb.JNIDecoder is NOT successfully registered
+java.lang.NoClassDefFoundError: Could not initialize class org.jitsi.impl.neomedia.codec.FFmpeg
+	at org.jitsi.impl.neomedia.codec.audio.FFmpegAudioDecoder.assertFindAVCodec(FFmpegAudioDecoder.java:42)
+	at org.jitsi.impl.neomedia.codec.audio.amrwb.JNIDecoder.<clinit>(JNIDecoder.java:34)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.neomedia.codec.FMJPlugInConfiguration.registerCustomCodecs(FMJPlugInConfiguration.java:234)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.setupFMJ(MediaServiceImpl.java:1618)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.<clinit>(MediaServiceImpl.java:250)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.initializeService(LibJitsiImpl.java:173)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.getService(LibJitsiImpl.java:131)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl.getService(LibJitsiImpl.java:91)
+	at org.jitsi.service.libjitsi.LibJitsi.invokeGetServiceOnImpl(LibJitsi.java:172)
+	at org.jitsi.service.libjitsi.LibJitsi.getMediaService(LibJitsi.java:124)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.scanDevices(MediaPreferencePanel.java:140)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.<init>(MediaPreferencePanel.java:102)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreference.<init>(MediaPreference.java:33)
+	at org.jivesoftware.spark.preference.PreferenceManager.<init>(PreferenceManager.java:55)
+	at org.jivesoftware.spark.SparkManager.getPreferenceManager(SparkManager.java:166)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.<init>(SparkTransferManager.java:209)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.getInstance(SparkTransferManager.java:132)
+	at org.jivesoftware.spark.Workspace.buildLayout(Workspace.java:215)
+	at org.jivesoftware.LoginDialog.lambda$1(LoginDialog.java:1416)
+	at org.jivesoftware.LoginDialog$$Lambda$30/25427194.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger warn
+警告: Codec org.jitsi.impl.neomedia.codec.audio.amrwb.JNIEncoder is NOT successfully registered
+java.lang.NoClassDefFoundError: Could not initialize class org.jitsi.impl.neomedia.codec.FFmpeg
+	at org.jitsi.impl.neomedia.codec.audio.FFmpegAudioEncoder.assertFindAVCodec(FFmpegAudioEncoder.java:49)
+	at org.jitsi.impl.neomedia.codec.audio.amrwb.JNIEncoder.<clinit>(JNIEncoder.java:35)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.neomedia.codec.FMJPlugInConfiguration.registerCustomCodecs(FMJPlugInConfiguration.java:234)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.setupFMJ(MediaServiceImpl.java:1618)
+	at org.jitsi.impl.neomedia.MediaServiceImpl.<clinit>(MediaServiceImpl.java:250)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Unknown Source)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.initializeService(LibJitsiImpl.java:173)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl$ServiceLock.getService(LibJitsiImpl.java:131)
+	at org.jitsi.impl.libjitsi.LibJitsiImpl.getService(LibJitsiImpl.java:91)
+	at org.jitsi.service.libjitsi.LibJitsi.invokeGetServiceOnImpl(LibJitsi.java:172)
+	at org.jitsi.service.libjitsi.LibJitsi.getMediaService(LibJitsi.java:124)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.scanDevices(MediaPreferencePanel.java:140)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreferencePanel.<init>(MediaPreferencePanel.java:102)
+	at org.jivesoftware.sparkimpl.preference.media.MediaPreference.<init>(MediaPreference.java:33)
+	at org.jivesoftware.spark.preference.PreferenceManager.<init>(PreferenceManager.java:55)
+	at org.jivesoftware.spark.SparkManager.getPreferenceManager(SparkManager.java:166)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.<init>(SparkTransferManager.java:209)
+	at org.jivesoftware.spark.filetransfer.SparkTransferManager.getInstance(SparkTransferManager.java:132)
+	at org.jivesoftware.spark.Workspace.buildLayout(Workspace.java:215)
+	at org.jivesoftware.LoginDialog.lambda$1(LoginDialog.java:1416)
+	at org.jivesoftware.LoginDialog$$Lambda$30/25427194.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:30 下午 org.jitsi.util.Logger info
+信息: Initializing audio devices
+十一月 13, 2017 4:14:31 下午 org.jitsi.util.Logger info
+信息: Initializing video devices
+十一月 13, 2017 4:14:31 下午 org.jitsi.util.Logger info
+信息: Looking for configured audio devices.
+十一月 13, 2017 4:14:31 下午 org.jitsi.util.Logger info
+信息: Scanning for configured Video Devices.
+十一月 13, 2017 4:14:31 下午 org.jitsi.util.Logger info
+信息: Found Desktop Streaming 0 as a AVFRAME, class org.jitsi.impl.neomedia.codec.video.AVFrame video capture device.
+================================
+MediaType: audio
+Device: 麦克风 (Realtek High Definition Audio) : wasapi:{0.0.1.00000000}.{87bf66f9-f6fe-475e-9767-9dc0ffa940ef}
+LINEAR, 48000.0 Hz, 16-bit, Mono, LittleEndian, Signed
+LINEAR, 48000.0 Hz, 8-bit, Mono, Signed
+LINEAR, 48000.0 Hz, 16-bit, Stereo, LittleEndian, Signed
+LINEAR, 48000.0 Hz, 8-bit, Stereo, Signed
+LINEAR, 22050.0 Hz, 16-bit, Mono, LittleEndian, Signed
+LINEAR, 16000.0 Hz, 16-bit, Mono, LittleEndian, Signed
+LINEAR, 11025.0 Hz, 16-bit, Mono, LittleEndian, Signed
+LINEAR, 8000.0 Hz, 16-bit, Mono, LittleEndian, Signed
+
+================================
+================================
+MediaType: video
+Device: org.jitsi.impl.neomedia.device.MediaDeviceImpl@12fce50
+================================
+================================
+MediaType: data
+Device: null
+================================
+十一月 13, 2017 4:14:31 下午 org.jitsi.util.Logger info
+信息: Looking for configured audio devices.
+十一月 13, 2017 4:14:33 下午 org.jitsi.util.Logger info
+信息: GatherEntropy got: 88200 bytes
+java.io.IOException: Couldn't get lock for C:\Users\Dell\AppData\Roaming\Spark\logs\errors.log
+	at java.util.logging.FileHandler.openFiles(Unknown Source)
+	at java.util.logging.FileHandler.<init>(Unknown Source)
+	at org.jivesoftware.spark.util.log.Log.<init>(Log.java:66)
+	at org.jivesoftware.spark.util.log.Log.getInstance(Log.java:46)
+	at org.jivesoftware.spark.util.log.Log.error(Log.java:108)
+	at org.jivesoftware.sparkimpl.plugin.language.LanguagePlugin.initialize(LanguagePlugin.java:145)
+	at org.jivesoftware.spark.PluginManager.lambda$1(PluginManager.java:644)
+	at org.jivesoftware.spark.PluginManager$$Lambda$74/31041370.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+十一月 13, 2017 4:14:33 下午 org.jivesoftware.spark.util.log.Log error
+严重: Error unzipping plugin
+java.lang.NullPointerException
+	at org.jivesoftware.sparkimpl.plugin.language.LanguagePlugin.initialize(LanguagePlugin.java:107)
+	at org.jivesoftware.spark.PluginManager.lambda$1(PluginManager.java:644)
+	at org.jivesoftware.spark.PluginManager$$Lambda$74/31041370.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:33 下午 org.jivesoftware.spark.util.log.Log error
+严重: 
+java.lang.NullPointerException
+	at java.awt.Container.addImpl(Unknown Source)
+	at java.awt.Container.add(Unknown Source)
+	at javax.swing.JPopupMenu.add(Unknown Source)
+	at javax.swing.JMenu.add(Unknown Source)
+	at org.jivesoftware.sparkimpl.plugin.language.LanguagePlugin.initialize(LanguagePlugin.java:147)
+	at org.jivesoftware.spark.PluginManager.lambda$1(PluginManager.java:644)
+	at org.jivesoftware.spark.PluginManager$$Lambda$74/31041370.run(Unknown Source)
+	at java.awt.event.InvocationEvent.dispatch(Unknown Source)
+	at java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.awt.EventQueue.access$400(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.awt.EventQueue$3.run(Unknown Source)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.security.ProtectionDomain$1.doIntersectionPrivilege(Unknown Source)
+	at java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.awt.EventDispatchThread.run(Unknown Source)
+
+十一月 13, 2017 4:14:33 下午 org.jivesoftware.spark.util.log.Log error
+严重: Dictionary not found
